@@ -5,38 +5,26 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>نیهان شاپ | Nihan Shop</title>
 
-    <meta
-        name="description"
-        content="نیهان شاپ - فروشگاه محصولات آرایشی و بهداشتی"
-    >
+    <meta name="description"
+          content="نیهان شاپ - فروشگاه محصولات آرایشی و بهداشتی">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="stylesheet"
+          href="style.css">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
 </head>
 
@@ -44,9 +32,7 @@
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- ================= HEADER ================= -->
 
 <header class="header">
 
@@ -65,15 +51,29 @@
             ارتباط با ما
         </a>
 
+        <button
+            class="cart-header"
+            onclick="openCart()">
+
+            🛒
+
+            <span>
+                سبد خرید
+            </span>
+
+            <b id="cartCount">
+                0
+            </b>
+
+        </button>
+
     </nav>
 
 </header>
 
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -102,14 +102,11 @@
 
 
 
-<!-- =====================================================
-     PRODUCTS
-===================================================== -->
+<!-- ================= PRODUCTS ================= -->
 
 <section
     class="products-section"
-    id="products"
->
+    id="products">
 
 
     <div class="section-title">
@@ -133,14 +130,13 @@
     <div class="products-grid">
 
 
-        <!-- ================= PRODUCT 1 ================= -->
+        <!-- محصول 1 -->
 
         <article class="product-card">
 
             <img
                 src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                alt="محصول آرایشی شماره ۱"
-            >
+                alt="محصول آرایشی شماره ۱">
 
 
             <div class="product-info">
@@ -153,39 +149,36 @@
                     محصول با کیفیت نیهان شاپ
                 </p>
 
-
-                <div class="product-price">
+                <strong class="product-price">
                     ۵۹۰,۰۰۰ تومان
-                </div>
+                </strong>
 
 
-                <div class="buttons">
+                <button
+                    class="add-cart"
+                    onclick="addToCart(
+                    'محصول آرایشی شماره ۱',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    590000
+                    )">
 
-                    <button
-                        class="view-button"
-                        onclick="openProduct(
-                            'محصول آرایشی شماره ۱',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            'این قسمت توضیحات کامل محصول قرار می‌گیرد. می‌توانیم ویژگی‌ها، نحوه استفاده، برند، حجم و اطلاعات دیگر محصول را اینجا بنویسیم.',
-                            590000
-                        )"
-                    >
-                        مشاهده
-                    </button>
+                    افزودن به سبد
+
+                </button>
 
 
-                    <button
-                        class="cart-add-button"
-                        onclick="addToCart(
-                            'محصول آرایشی شماره ۱',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            590000
-                        )"
-                    >
-                        افزودن به سبد
-                    </button>
+                <button
+                    class="view-button"
+                    onclick="openProduct(
+                    'محصول آرایشی شماره ۱',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    'این قسمت توضیحات کامل محصول قرار می‌گیرد.',
+                    '۵۹۰,۰۰۰ تومان'
+                    )">
 
-                </div>
+                    مشاهده محصول
+
+                </button>
 
             </div>
 
@@ -193,14 +186,13 @@
 
 
 
-        <!-- ================= PRODUCT 2 ================= -->
+        <!-- محصول 2 -->
 
         <article class="product-card">
 
             <img
                 src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                alt="محصول آرایشی شماره ۲"
-            >
+                alt="محصول آرایشی شماره ۲">
 
 
             <div class="product-info">
@@ -213,39 +205,36 @@
                     محصول با کیفیت نیهان شاپ
                 </p>
 
-
-                <div class="product-price">
+                <strong class="product-price">
                     ۷۹۰,۰۰۰ تومان
-                </div>
+                </strong>
 
 
-                <div class="buttons">
+                <button
+                    class="add-cart"
+                    onclick="addToCart(
+                    'محصول آرایشی شماره ۲',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    790000
+                    )">
 
-                    <button
-                        class="view-button"
-                        onclick="openProduct(
-                            'محصول آرایشی شماره ۲',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            'توضیحات کامل محصول شماره ۲ اینجا قرار می‌گیرد.',
-                            790000
-                        )"
-                    >
-                        مشاهده
-                    </button>
+                    افزودن به سبد
+
+                </button>
 
 
-                    <button
-                        class="cart-add-button"
-                        onclick="addToCart(
-                            'محصول آرایشی شماره ۲',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            790000
-                        )"
-                    >
-                        افزودن به سبد
-                    </button>
+                <button
+                    class="view-button"
+                    onclick="openProduct(
+                    'محصول آرایشی شماره ۲',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    'توضیحات کامل محصول شماره ۲ اینجا قرار می‌گیرد.',
+                    '۷۹۰,۰۰۰ تومان'
+                    )">
 
-                </div>
+                    مشاهده محصول
+
+                </button>
 
             </div>
 
@@ -253,14 +242,13 @@
 
 
 
-        <!-- ================= PRODUCT 3 ================= -->
+        <!-- محصول 3 -->
 
         <article class="product-card">
 
             <img
                 src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                alt="محصول آرایشی شماره ۳"
-            >
+                alt="محصول آرایشی شماره ۳">
 
 
             <div class="product-info">
@@ -273,39 +261,36 @@
                     محصول با کیفیت نیهان شاپ
                 </p>
 
-
-                <div class="product-price">
+                <strong class="product-price">
                     ۴۹۰,۰۰۰ تومان
-                </div>
+                </strong>
 
 
-                <div class="buttons">
+                <button
+                    class="add-cart"
+                    onclick="addToCart(
+                    'محصول آرایشی شماره ۳',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    490000
+                    )">
 
-                    <button
-                        class="view-button"
-                        onclick="openProduct(
-                            'محصول آرایشی شماره ۳',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            'توضیحات کامل محصول شماره ۳ اینجا قرار می‌گیرد.',
-                            490000
-                        )"
-                    >
-                        مشاهده
-                    </button>
+                    افزودن به سبد
+
+                </button>
 
 
-                    <button
-                        class="cart-add-button"
-                        onclick="addToCart(
-                            'محصول آرایشی شماره ۳',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            490000
-                        )"
-                    >
-                        افزودن به سبد
-                    </button>
+                <button
+                    class="view-button"
+                    onclick="openProduct(
+                    'محصول آرایشی شماره ۳',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    'توضیحات کامل محصول شماره ۳ اینجا قرار می‌گیرد.',
+                    '۴۹۰,۰۰۰ تومان'
+                    )">
 
-                </div>
+                    مشاهده محصول
+
+                </button>
 
             </div>
 
@@ -313,14 +298,13 @@
 
 
 
-        <!-- ================= PRODUCT 4 ================= -->
+        <!-- محصول 4 -->
 
         <article class="product-card">
 
             <img
                 src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                alt="محصول آرایشی شماره ۴"
-            >
+                alt="محصول آرایشی شماره ۴">
 
 
             <div class="product-info">
@@ -333,39 +317,36 @@
                     محصول با کیفیت نیهان شاپ
                 </p>
 
-
-                <div class="product-price">
+                <strong class="product-price">
                     ۶۹۰,۰۰۰ تومان
-                </div>
+                </strong>
 
 
-                <div class="buttons">
+                <button
+                    class="add-cart"
+                    onclick="addToCart(
+                    'محصول آرایشی شماره ۴',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    690000
+                    )">
 
-                    <button
-                        class="view-button"
-                        onclick="openProduct(
-                            'محصول آرایشی شماره ۴',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            'توضیحات کامل محصول شماره ۴ اینجا قرار می‌گیرد.',
-                            690000
-                        )"
-                    >
-                        مشاهده
-                    </button>
+                    افزودن به سبد
+
+                </button>
 
 
-                    <button
-                        class="cart-add-button"
-                        onclick="addToCart(
-                            'محصول آرایشی شماره ۴',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            690000
-                        )"
-                    >
-                        افزودن به سبد
-                    </button>
+                <button
+                    class="view-button"
+                    onclick="openProduct(
+                    'محصول آرایشی شماره ۴',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    'توضیحات کامل محصول شماره ۴ اینجا قرار می‌گیرد.',
+                    '۶۹۰,۰۰۰ تومان'
+                    )">
 
-                </div>
+                    مشاهده محصول
+
+                </button>
 
             </div>
 
@@ -373,14 +354,13 @@
 
 
 
-        <!-- ================= PRODUCT 5 ================= -->
+        <!-- محصول 5 -->
 
         <article class="product-card">
 
             <img
                 src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                alt="محصول آرایشی شماره ۵"
-            >
+                alt="محصول آرایشی شماره ۵">
 
 
             <div class="product-info">
@@ -393,39 +373,36 @@
                     محصول با کیفیت نیهان شاپ
                 </p>
 
-
-                <div class="product-price">
+                <strong class="product-price">
                     ۸۹۰,۰۰۰ تومان
-                </div>
+                </strong>
 
 
-                <div class="buttons">
+                <button
+                    class="add-cart"
+                    onclick="addToCart(
+                    'محصول آرایشی شماره ۵',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    890000
+                    )">
 
-                    <button
-                        class="view-button"
-                        onclick="openProduct(
-                            'محصول آرایشی شماره ۵',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            'توضیحات کامل محصول شماره ۵ اینجا قرار می‌گیرد.',
-                            890000
-                        )"
-                    >
-                        مشاهده
-                    </button>
+                    افزودن به سبد
+
+                </button>
 
 
-                    <button
-                        class="cart-add-button"
-                        onclick="addToCart(
-                            'محصول آرایشی شماره ۵',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            890000
-                        )"
-                    >
-                        افزودن به سبد
-                    </button>
+                <button
+                    class="view-button"
+                    onclick="openProduct(
+                    'محصول آرایشی شماره ۵',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    'توضیحات کامل محصول شماره ۵ اینجا قرار می‌گیرد.',
+                    '۸۹۰,۰۰۰ تومان'
+                    )">
 
-                </div>
+                    مشاهده محصول
+
+                </button>
 
             </div>
 
@@ -433,14 +410,13 @@
 
 
 
-        <!-- ================= PRODUCT 6 ================= -->
+        <!-- محصول 6 -->
 
         <article class="product-card">
 
             <img
                 src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                alt="محصول آرایشی شماره ۶"
-            >
+                alt="محصول آرایشی شماره ۶">
 
 
             <div class="product-info">
@@ -453,39 +429,36 @@
                     محصول با کیفیت نیهان شاپ
                 </p>
 
-
-                <div class="product-price">
+                <strong class="product-price">
                     ۳۹۰,۰۰۰ تومان
-                </div>
+                </strong>
 
 
-                <div class="buttons">
+                <button
+                    class="add-cart"
+                    onclick="addToCart(
+                    'محصول آرایشی شماره ۶',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    390000
+                    )">
 
-                    <button
-                        class="view-button"
-                        onclick="openProduct(
-                            'محصول آرایشی شماره ۶',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            'توضیحات کامل محصول شماره ۶ اینجا قرار می‌گیرد.',
-                            390000
-                        )"
-                    >
-                        مشاهده
-                    </button>
+                    افزودن به سبد
+
+                </button>
 
 
-                    <button
-                        class="cart-add-button"
-                        onclick="addToCart(
-                            'محصول آرایشی شماره ۶',
-                            'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
-                            390000
-                        )"
-                    >
-                        افزودن به سبد
-                    </button>
+                <button
+                    class="view-button"
+                    onclick="openProduct(
+                    'محصول آرایشی شماره ۶',
+                    'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                    'توضیحات کامل محصول شماره ۶ اینجا قرار می‌گیرد.',
+                    '۳۹۰,۰۰۰ تومان'
+                    )">
 
-                </div>
+                    مشاهده محصول
+
+                </button>
 
             </div>
 
@@ -498,32 +471,27 @@
 
 
 
-<!-- =====================================================
-     PRODUCT MODAL
-===================================================== -->
+<!-- ================= PRODUCT MODAL ================= -->
 
 <div
-    id="productModal"
     class="modal"
->
-
+    id="productModal">
 
     <div class="modal-box">
 
-
         <button
             class="close-modal"
-            onclick="closeProduct()"
-        >
+            onclick="closeProduct()">
+
             ×
+
         </button>
 
 
         <img
             id="modalImage"
             src=""
-            alt="محصول"
-        >
+            alt="محصول">
 
 
         <div class="modal-content">
@@ -532,24 +500,22 @@
                 NIHAN SHOP
             </span>
 
-
             <h2 id="modalTitle"></h2>
-
 
             <p id="modalDescription"></p>
 
-
             <div
                 class="modal-price"
-                id="modalPrice"
-            ></div>
+                id="modalPrice">
+            </div>
 
 
             <button
                 id="modalAddCart"
-                class="modal-buy"
-            >
+                class="modal-buy">
+
                 افزودن به سبد خرید
+
             </button>
 
         </div>
@@ -560,49 +526,26 @@
 
 
 
-<!-- =====================================================
-     SHOPPING CART BUTTON
-===================================================== -->
-
-<button
-    id="cartButton"
-    class="cart-floating"
-    onclick="openCart()"
-    aria-label="سبد خرید"
->
-
-    🛒
-
-    <span id="cartCount">
-        0
-    </span>
-
-</button>
-
-
-
-<!-- =====================================================
-     SHOPPING CART MODAL
-===================================================== -->
+<!-- ================= CART MODAL ================= -->
 
 <div
-    id="cartModal"
     class="cart-modal"
->
+    id="cartModal">
 
 
     <div class="cart-box">
 
 
         <button
-            class="cart-close"
-            onclick="closeCart()"
-        >
+            class="close-modal"
+            onclick="closeCart()">
+
             ×
+
         </button>
 
 
-        <div class="cart-header">
+        <div class="cart-title">
 
             <span>
                 NIHAN SHOP
@@ -612,79 +555,36 @@
                 سبد خرید
             </h2>
 
-            <p>
-                محصولات انتخاب‌شده شما
-            </p>
-
         </div>
 
 
         <div
             id="cartItems"
-            class="cart-items"
-        ></div>
+            class="cart-items">
+        </div>
 
 
-        <div
-            id="emptyCart"
-            class="empty-cart"
-        >
+        <div class="cart-total">
 
-            <div class="empty-cart-icon">
-                🛍️
-            </div>
+            <span>
+                مبلغ کل
+            </span>
 
-            <h3>
-                سبد خرید خالی است
-            </h3>
-
-            <p>
-                محصول مورد علاقه‌ات را به سبد خرید اضافه کن.
-            </p>
+            <strong id="cartTotal">
+                ۰ تومان
+            </strong>
 
         </div>
 
 
-        <div
-            id="cartFooter"
-            class="cart-footer"
-        >
+        <button
+            class="checkout-button"
+            onclick="openCustomerForm()">
 
-            <div class="cart-total">
+            ادامه و ثبت مشخصات
 
-                <span>
-                    جمع کل
-                </span>
+        </button>
 
-                <strong id="cartTotal">
-                    ۰ تومان
-                </strong>
-
-            </div>
-
-
-            <button
-                class="direct-order-button"
-                onclick="sendCartToInstagram()"
-            >
-
-                ارسال سفارش در دایرکت
-
-                <span>
-                    ↗
-                </span>
-
-            </button>
-
-
-            <p class="cart-note">
-
-                با تأیید سفارش، متن سفارش کپی می‌شود
-                و دایرکت پیج برای شما باز خواهد شد.
-
-            </p>
-
-        </div>
 
     </div>
 
@@ -692,20 +592,233 @@
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= CUSTOMER FORM ================= -->
+
+<div
+    class="customer-modal"
+    id="customerModal">
+
+
+    <div class="customer-box">
+
+
+        <button
+            class="close-modal"
+            onclick="closeCustomerForm()">
+
+            ×
+
+        </button>
+
+
+        <div class="cart-title">
+
+            <span>
+                NIHAN SHOP
+            </span>
+
+            <h2>
+                مشخصات سفارش
+            </h2>
+
+            <p>
+                اطلاعات خود را برای ثبت سفارش وارد کنید.
+            </p>
+
+        </div>
+
+
+        <form
+            id="customerForm"
+            onsubmit="submitOrder(event)">
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        نام
+                    </label>
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        required
+                        placeholder="نام">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        نام خانوادگی
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        required
+                        placeholder="نام خانوادگی">
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    شماره تماس
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    required
+                    placeholder="09xxxxxxxxx">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    کد پستی
+                </label>
+
+                <input
+                    type="text"
+                    id="postalCode"
+                    required
+                    placeholder="کد پستی">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    آدرس پستی
+                </label>
+
+                <textarea
+                    id="address"
+                    required
+                    rows="4"
+                    placeholder="آدرس کامل پستی">
+                </textarea>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="checkout-button">
+
+                تأیید و آماده‌سازی سفارش
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ORDER RESULT ================= -->
+
+<div
+    class="order-modal"
+    id="orderModal">
+
+
+    <div class="order-box">
+
+
+        <button
+            class="close-modal"
+            onclick="closeOrder()">
+
+            ×
+
+        </button>
+
+
+        <div class="cart-title">
+
+            <span>
+                NIHAN SHOP
+            </span>
+
+            <h2>
+                سفارش شما آماده است
+            </h2>
+
+        </div>
+
+
+        <div
+            id="orderPreview"
+            class="order-preview">
+        </div>
+
+
+        <button
+            class="copy-order"
+            onclick="copyOrderText()">
+
+            📋 کپی اطلاعات سفارش
+
+        </button>
+
+
+        <a
+            href="https://rubika.ir/sampixel"
+            target="_blank"
+            class="rubika-button"
+            onclick="copyOrderText()">
+
+            ارسال سفارش در روبیکا
+
+        </a>
+
+
+        <p class="order-help">
+
+            متن سفارش کپی می‌شود.
+            سپس وارد روبیکا شوید و آن را در چت
+            <strong>@sampixel</strong>
+            ارسال کنید.
+
+        </p>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer id="contact">
 
-
     <div class="footer-content">
-
 
         <h2>
             Nihan Shop
         </h2>
-
 
         <p>
             برای سفارش و ارتباط با ما همراه ما باشید.
@@ -714,46 +827,30 @@
 
         <div class="socials">
 
-
-            <a
-                href="https://instagram.com/nihanshop2026"
-                target="_blank"
-            >
+            <a href="#"
+               target="_blank">
                 Instagram
             </a>
 
-
-            <a
-                href="https://t.me/"
-                target="_blank"
-            >
+            <a href="#"
+               target="_blank">
                 Telegram
             </a>
 
-
-            <a
-                href="https://wa.me/"
-                target="_blank"
-            >
-                WhatsApp
-            </a>
-
-
-            <a
-                href="#"
-                target="_blank"
-            >
+            <a href="https://rubika.ir/sampixel"
+               target="_blank">
                 Rubika
             </a>
 
-
-            <a
-                href="#"
-                target="_blank"
-            >
-                Eitaa
+            <a href="#"
+               target="_blank">
+                WhatsApp
             </a>
 
+            <a href="#"
+               target="_blank">
+                Eitaa
+            </a>
 
         </div>
 
@@ -762,619 +859,13 @@
             © 2026 Nihan Shop
         </div>
 
-
     </div>
 
 </footer>
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-
-/* =====================================================
-   SHOPPING CART
-===================================================== */
-
-let cart = [];
-
-
-
-/* =====================================================
-   ADD PRODUCT
-===================================================== */
-
-function addToCart(name, image, price) {
-
-
-    const existingProduct =
-        cart.find(
-            item => item.name === name
-        );
-
-
-    if (existingProduct) {
-
-        existingProduct.quantity++;
-
-    } else {
-
-        cart.push({
-
-            name: name,
-
-            image: image,
-
-            price: price,
-
-            quantity: 1
-
-        });
-
-    }
-
-
-    updateCart();
-
-
-    openCart();
-
-}
-
-
-
-/* =====================================================
-   UPDATE CART
-===================================================== */
-
-function updateCart() {
-
-
-    const cartItems =
-        document.getElementById("cartItems");
-
-
-    const emptyCart =
-        document.getElementById("emptyCart");
-
-
-    const cartFooter =
-        document.getElementById("cartFooter");
-
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-
-    const cartTotal =
-        document.getElementById("cartTotal");
-
-
-
-    if (cart.length === 0) {
-
-
-        cartItems.innerHTML = "";
-
-
-        emptyCart.style.display =
-            "block";
-
-
-        cartFooter.style.display =
-            "none";
-
-
-        cartCount.textContent =
-            "0";
-
-
-        cartTotal.textContent =
-            "۰ تومان";
-
-
-        return;
-
-    }
-
-
-
-    emptyCart.style.display =
-        "none";
-
-
-    cartFooter.style.display =
-        "block";
-
-
-
-    let totalItems = 0;
-
-    let totalPrice = 0;
-
-
-
-    cartItems.innerHTML =
-
-        cart.map(
-            (item, index) => {
-
-
-                const itemTotal =
-                    item.price *
-                    item.quantity;
-
-
-                totalItems +=
-                    item.quantity;
-
-
-                totalPrice +=
-                    itemTotal;
-
-
-
-                return `
-
-                    <div class="cart-item">
-
-
-                        <img
-                            class="cart-item-image"
-                            src="${item.image}"
-                            alt="${item.name}"
-                        >
-
-
-                        <div class="cart-item-info">
-
-
-                            <h3>
-                                ${item.name}
-                            </h3>
-
-
-                            <p>
-                                مبلغ هر محصول:
-                                ${formatPrice(item.price)}
-                                تومان
-                            </p>
-
-
-                            <div
-                                class="cart-quantity"
-                            >
-
-
-                                <button
-                                    onclick="changeQuantity(
-                                        ${index},
-                                        -1
-                                    )"
-                                >
-                                    −
-                                </button>
-
-
-                                <span>
-                                    ${item.quantity}
-                                </span>
-
-
-                                <button
-                                    onclick="changeQuantity(
-                                        ${index},
-                                        1
-                                    )"
-                                >
-                                    +
-                                </button>
-
-
-                            </div>
-
-
-                            <button
-                                class="cart-remove"
-                                onclick="removeFromCart(
-                                    ${index}
-                                )"
-                            >
-                                حذف محصول
-                            </button>
-
-
-                        </div>
-
-
-                        <div
-                            class="cart-item-price"
-                        >
-
-                            ${formatPrice(itemTotal)}
-                            تومان
-
-                        </div>
-
-
-                    </div>
-
-                `;
-
-            }
-        ).join("");
-
-
-
-    cartCount.textContent =
-        totalItems;
-
-
-    cartTotal.textContent =
-        formatPrice(totalPrice) +
-        " تومان";
-
-}
-
-
-
-/* =====================================================
-   CHANGE QUANTITY
-===================================================== */
-
-function changeQuantity(
-    index,
-    change
-) {
-
-
-    cart[index].quantity +=
-        change;
-
-
-    if (
-        cart[index].quantity <= 0
-    ) {
-
-        cart.splice(index, 1);
-
-    }
-
-
-    updateCart();
-
-}
-
-
-
-/* =====================================================
-   REMOVE PRODUCT
-===================================================== */
-
-function removeFromCart(index) {
-
-    cart.splice(index, 1);
-
-    updateCart();
-
-}
-
-
-
-/* =====================================================
-   OPEN CART
-===================================================== */
-
-function openCart() {
-
-    document
-        .getElementById("cartModal")
-        .classList
-        .add("active");
-
-}
-
-
-
-/* =====================================================
-   CLOSE CART
-===================================================== */
-
-function closeCart() {
-
-    document
-        .getElementById("cartModal")
-        .classList
-        .remove("active");
-
-}
-
-
-
-/* =====================================================
-   FORMAT PRICE
-===================================================== */
-
-function formatPrice(price) {
-
-    return new Intl.NumberFormat(
-        "fa-IR"
-    ).format(price);
-
-}
-
-
-
-/* =====================================================
-   SEND ORDER TO INSTAGRAM
-===================================================== */
-
-async function sendCartToInstagram() {
-
-
-    if (
-        cart.length === 0
-    ) {
-
-        alert(
-            "سبد خرید شما خالی است."
-        );
-
-        return;
-
-    }
-
-
-
-    let message =
-        "🛍 سفارش نیهان شاپ\n\n";
-
-
-
-    cart.forEach(
-        (item, index) => {
-
-
-            message +=
-                `${index + 1}. ${item.name}\n`;
-
-
-            message +=
-                `تعداد: ${item.quantity}\n`;
-
-
-            message +=
-                `مبلغ هر محصول: ${formatPrice(item.price)} تومان\n\n`;
-
-        }
-    );
-
-
-
-    const total =
-        cart.reduce(
-            (sum, item) =>
-                sum +
-                (
-                    item.price *
-                    item.quantity
-                ),
-            0
-        );
-
-
-
-    message +=
-        "━━━━━━━━━━━━\n";
-
-
-    message +=
-        `جمع کل: ${formatPrice(total)} تومان\n\n`;
-
-
-    message +=
-        "لطفاً جهت تکمیل سفارش راهنمایی بفرمایید.";
-
-
-
-    try {
-
-
-        await navigator.clipboard.writeText(
-            message
-        );
-
-
-        alert(
-            "سفارش آماده شد ✅\n\n" +
-            "متن سفارش کپی شد.\n" +
-            "حالا در دایرکت فقط Paste و ارسال کنید."
-        );
-
-
-    } catch (error) {
-
-
-        prompt(
-            "متن سفارش را کپی کنید:",
-            message
-        );
-
-    }
-
-
-
-    window.open(
-        "https://ig.me/m/saeedmoghadari",
-        "_blank"
-    );
-
-}
-
-
-
-/* =====================================================
-   PRODUCT MODAL
-===================================================== */
-
-function openProduct(
-    title,
-    image,
-    description,
-    price
-) {
-
-
-    document.getElementById(
-        "modalTitle"
-    ).textContent = title;
-
-
-    document.getElementById(
-        "modalImage"
-    ).src = image;
-
-
-    document.getElementById(
-        "modalDescription"
-    ).textContent =
-        description;
-
-
-    document.getElementById(
-        "modalPrice"
-    ).textContent =
-        formatPrice(price) +
-        " تومان";
-
-
-
-    document.getElementById(
-        "modalAddCart"
-    ).onclick = function() {
-
-        addToCart(
-            title,
-            image,
-            price
-        );
-
-
-        closeProduct();
-
-    };
-
-
-
-    document
-        .getElementById("productModal")
-        .classList
-        .add("active");
-
-}
-
-
-
-/* =====================================================
-   CLOSE PRODUCT MODAL
-===================================================== */
-
-function closeProduct() {
-
-    document
-        .getElementById("productModal")
-        .classList
-        .remove("active");
-
-}
-
-
-
-/* =====================================================
-   CLICK OUTSIDE PRODUCT MODAL
-===================================================== */
-
-document
-    .getElementById("productModal")
-    .addEventListener(
-        "click",
-        function(event) {
-
-
-            if (
-                event.target === this
-            ) {
-
-                closeProduct();
-
-            }
-
-        }
-    );
-
-
-
-/* =====================================================
-   CLICK OUTSIDE CART
-===================================================== */
-
-document
-    .getElementById("cartModal")
-    .addEventListener(
-        "click",
-        function(event) {
-
-
-            if (
-                event.target === this
-            ) {
-
-                closeCart();
-
-            }
-
-        }
-    );
-
-
-
-/* =====================================================
-   ESC KEY
-===================================================== */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-
-        if (
-            event.key === "Escape"
-        ) {
-
-            closeProduct();
-
-            closeCart();
-
-        }
-
-    }
-);
-
-
-
-/* =====================================================
-   INITIALIZE
-===================================================== */
-
-updateCart();
-
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
 
