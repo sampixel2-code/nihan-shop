@@ -1,14 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
+/* =========================================================
+   NIHAN SHOP
+   Luxury Beauty Theme
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
 
 :root {
-    --pink: #b86b87;
-    --dark-pink: #8f405f;
-    --light-pink: #f9e9ef;
-    --cream: #fffafc;
-    --text: #292327;
-    --muted: #777078;
+
+    --pink-dark: #8f4967;
+    --pink: #b96888;
+    --pink-light: #f8e4ec;
+    --pink-soft: #fff6f9;
+
+    --rose-gold: #c98b9f;
+    --rose-gold-light: #e8b9c7;
+
+    --cream: #fffaf8;
     --white: #ffffff;
+
+    --text-dark: #3d2932;
+    --text-soft: #806773;
+
+    --border: rgba(185, 104, 136, 0.18);
+
+    --shadow:
+        0 15px 45px rgba(102, 45, 69, 0.12);
+
+    --shadow-hover:
+        0 25px 65px rgba(102, 45, 69, 0.20);
+
+    --radius: 24px;
 }
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 * {
     margin: 0;
@@ -21,365 +53,827 @@ html {
 }
 
 body {
-    font-family: 'Vazirmatn', sans-serif;
-    background: var(--cream);
-    color: var(--text);
+
+    direction: rtl;
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    color: var(--text-dark);
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(232,185,199,0.20),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(201,139,159,0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fffafb 0%,
+            #fff5f8 45%,
+            #fdf0f5 100%
+        );
+
+    min-height: 100vh;
 }
 
 
-/* ================= HEADER ================= */
+/* =========================================================
+   LINKS
+   ========================================================= */
 
-.header {
-    width: 100%;
-    height: 76px;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
 
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 7%;
-
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-
-    border-bottom: 1px solid #f0dce4;
-}
-
-.logo {
-    font-family: Georgia, serif;
-    font-size: 27px;
-    font-weight: bold;
-    color: var(--dark-pink);
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: var(--pink);
-}
-
-
-/* ================= HERO BANNER ================= */
-
-.hero {
-    position: relative;
     width: 100%;
-    min-height: clamp(330px, 38vw, 575px);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background:
+        rgba(255, 250, 252, 0.88);
 
-    overflow: hidden;
-    text-align: center;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
-    background-image: url("images/nihan-hero-desktop.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    border-bottom:
+        1px solid rgba(185, 104, 136, 0.12);
+
+    box-shadow:
+        0 8px 30px rgba(91, 39, 58, 0.06);
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: transparent;
-}
 
-.hero-content {
-    position: relative;
-    z-index: 2;
+header > div,
+header .header-content {
 
-    /* متن داخل تصویر بنر است؛ این نسخه برای دسترسی/SEO در HTML باقی مانده */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-}
-
-@media (max-width: 600px) {
-    .hero {
-        min-height: 430px;
-        background-image: url("images/nihan-hero-mobile.jpg");
-        background-position: center center;
-    }
-}
-
-/* ================= PRODUCTS ================= */
-
-.products-section {
-    width: 100%;
     max-width: 1250px;
 
     margin: auto;
 
-    padding: 80px 25px;
+    min-height: 82px;
+
+    padding:
+        14px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
 }
 
-.section-title {
+
+/* Logo */
+
+.logo {
+
+    direction: ltr;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    color: var(--pink-dark);
+
+    position: relative;
+
+    white-space: nowrap;
+}
+
+.logo::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: -7px;
+
+    width: 45%;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--rose-gold),
+            transparent
+        );
+}
+
+
+/* Navigation */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+nav a {
+
+    position: relative;
+
+    padding: 10px 17px;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 14px;
+
+    transition:
+        0.3s ease;
+}
+
+nav a:hover {
+
+    color: var(--pink-dark);
+
+    background:
+        rgba(248, 228, 236, 0.75);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-image:
+        url("images/header-desktop.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* اگر نام فایل هدر فرق دارد
+   فقط مسیر بالا را تغییر بده */
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(42, 18, 29, 0.28),
+            rgba(42, 18, 29, 0.06),
+            rgba(255, 235, 242, 0.12)
+        );
+
+    backdrop-filter:
+        saturate(1.05);
+}
+
+
+/* Soft luxury glow */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 220, 232, 0.25);
+
+    filter: blur(80px);
+
+    top: -200px;
+    right: -150px;
+
+    z-index: 1;
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(213, 151, 174, 0.20);
+
+    filter: blur(100px);
+
+    bottom: -220px;
+    left: -150px;
+
+    z-index: 1;
+}
+
+
+/* Hero content */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
     text-align: center;
-    margin-bottom: 45px;
+
+    width: min(850px, 90%);
+
+    padding: 55px 40px;
+
+    border:
+        1px solid rgba(255,255,255,0.45);
+
+    border-radius: 32px;
+
+    background:
+        rgba(255,255,255,0.13);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 25px 80px rgba(50, 20, 32, 0.15);
+}
+
+
+/* Brand */
+
+.hero-brand {
+
+    direction: ltr;
+
+    font-size: clamp(25px, 4vw, 46px);
+
+    font-weight: 900;
+
+    letter-spacing: 6px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 4px 20px rgba(63, 25, 40, 0.30);
+}
+
+
+/* Decorative line */
+
+.hero-line {
+
+    width: 90px;
+
+    height: 3px;
+
+    margin: 20px auto;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffffff,
+            transparent
+        );
+}
+
+
+/* Hero title */
+
+.hero-content h1 {
+
+    color: #ffffff;
+
+    font-size:
+        clamp(28px, 4vw, 52px);
+
+    font-weight: 900;
+
+    line-height: 1.6;
+
+    text-shadow:
+        0 4px 20px rgba(60, 20, 35, 0.28);
+}
+
+
+/* Hero subtitle */
+
+.hero-content p {
+
+    margin-top: 10px;
+
+    color: rgba(255,255,255,0.92);
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   PRODUCTS SECTION
+   ========================================================= */
+
+#products {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        90px 25px 100px;
+}
+
+
+/* Section title */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 55px;
 }
 
 .section-title span {
-    color: var(--pink);
 
-    font-family: Georgia, serif;
+    direction: ltr;
+
+    display: inline-block;
+
+    font-size: 13px;
+
+    font-weight: 800;
 
     letter-spacing: 4px;
 
-    font-size: 12px;
+    color: var(--rose-gold);
+
+    margin-bottom: 10px;
 }
 
 .section-title h2 {
-    margin-top: 10px;
 
-    font-size: 32px;
+    font-size:
+        clamp(28px, 4vw, 42px);
+
+    font-weight: 900;
+
+    color: var(--text-dark);
+
+    margin-bottom: 10px;
 }
 
 .section-title p {
-    margin-top: 7px;
 
-    color: var(--muted);
+    color: var(--text-soft);
 
-    font-size: 14px;
+    font-size: 15px;
 }
 
 
-/* شبکه محصولات */
+/* Decorative title line */
+
+.section-title h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    margin:
+        15px auto 0;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--rose-gold-light),
+            var(--pink),
+            var(--rose-gold-light)
+        );
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
 
 .products-grid {
-    width: 100%;
 
     display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
     gap: 28px;
 }
 
 
-/* کارت محصول */
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
 
 .product-card {
-    width: 100%;
+
+    position: relative;
 
     overflow: hidden;
 
-    background: var(--white);
+    background:
+        rgba(255,255,255,0.82);
 
-    border: 1px solid #f0e2e7;
+    border:
+        1px solid rgba(185,104,136,0.13);
 
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(90, 40, 60, 0.07);
-
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
+    border-radius:
+        var(--radius);
 
     box-shadow:
-        0 18px 40px rgba(90, 40, 60, 0.12);
+        var(--shadow);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+    backdrop-filter:
+        blur(10px);
 }
 
 
-/* عکس محصول */
+.product-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        var(--shadow-hover);
+
+    border-color:
+        rgba(185,104,136,0.30);
+}
+
+
+/* Product image */
 
 .product-card > img {
+
+    display: block;
+
     width: 100%;
 
     aspect-ratio: 1 / 1;
 
-    display: block;
-
     object-fit: cover;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff5f8,
+            #f8e4ec
+        );
+
+    transition:
+        transform 0.5s ease;
 }
 
 
-/* اطلاعات */
+.product-card:hover > img {
+
+    transform:
+        scale(1.04);
+}
+
+
+/* Image shine */
+
+.product-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.35),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        0.7s ease;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.product-card:hover::before {
+
+    left: 150%;
+}
+
+
+/* Product info */
 
 .product-info {
-    padding: 18px;
+
+    padding:
+        23px 22px 24px;
 }
+
 
 .product-info h3 {
-    font-size: 15px;
 
-    font-weight: 600;
+    font-size: 18px;
+
+    font-weight: 800;
+
+    color: var(--text-dark);
+
+    margin-bottom: 9px;
 }
+
 
 .product-info p {
-    margin-top: 6px;
 
-    color: var(--muted);
+    font-size: 13px;
 
-    font-size: 12px;
+    line-height: 1.9;
+
+    color: var(--text-soft);
+
+    min-height: 45px;
 }
 
 
-/* ================= BUTTONS ================= */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 .buttons {
-    width: 100%;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
-    gap: 9px;
+    gap: 10px;
 
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
-.buttons a,
-.buttons button {
-    width: 100%;
-    height: 40px;
+
+.view-button,
+.buy-button {
+
+    min-height: 46px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    border-radius: 9px;
+    border-radius: 14px;
 
     font-family: inherit;
 
-    font-size: 12px;
+    font-size: 14px;
 
-    text-decoration: none;
+    font-weight: 700;
 
     cursor: pointer;
 
-    transition: 0.25s;
+    transition:
+        0.3s ease;
 }
 
+
+/* View */
+
 .view-button {
-    border: none;
 
-    color: var(--dark-pink);
+    border:
+        1px solid rgba(185,104,136,0.25);
 
-    background: var(--light-pink);
+    background:
+        rgba(255,255,255,0.85);
+
+    color:
+        var(--pink-dark);
 }
 
 .view-button:hover {
-    background: #f1d3de;
+
+    color: #ffffff;
+
+    background:
+        var(--pink-dark);
+
+    transform:
+        translateY(-2px);
 }
 
+
+/* Buy */
+
 .buy-button {
+
     border: none;
 
-    color: white;
+    color: #ffffff;
 
-    background: var(--dark-pink);
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink-dark),
+            var(--pink)
+        );
+
+    box-shadow:
+        0 8px 20px rgba(143,73,103,0.20);
 }
 
 .buy-button:hover {
-    background: #74324d;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(143,73,103,0.30);
 }
 
 
-/* ================= MODAL ================= */
+/* =========================================================
+   MODAL
+   ========================================================= */
 
 .modal {
+
     position: fixed;
 
     inset: 0;
 
     z-index: 9999;
 
-    width: 100%;
-    height: 100%;
-
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    padding: 20px;
+    padding: 25px;
 
-    background: rgba(25, 17, 21, 0.65);
+    background:
+        rgba(45, 19, 31, 0.62);
 
-    backdrop-filter: blur(7px);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: opacity 0.25s, visibility 0.25s;
+    backdrop-filter:
+        blur(12px);
 }
 
-.modal.active {
-    opacity: 1;
-    visibility: visible;
-}
 
 .modal-box {
+
     position: relative;
 
-    width: min(820px, 100%);
+    width: min(850px, 100%);
 
     max-height: 90vh;
 
+    overflow: auto;
+
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    direction: ltr;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff6f9
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.8);
+
+    border-radius:
+        30px;
+
+    box-shadow:
+        0 35px 100px rgba(35, 12, 23, 0.35);
 
     overflow: hidden;
-
-    border-radius: 22px;
-
-    background: white;
-
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
-
-    transform: scale(0.95);
-
-    transition: transform 0.25s;
 }
 
-.modal.active .modal-box {
-    transform: scale(1);
-}
-
-
-/* عکس داخل پنجره */
 
 .modal-box > img {
+
     width: 100%;
+
     height: 100%;
 
-    min-height: 420px;
-
-    display: block;
+    min-height: 430px;
 
     object-fit: cover;
+
+    background:
+        #f8e4ec;
 }
 
 
-/* محتوای پنجره */
-
 .modal-content {
-    min-width: 0;
 
-    padding: 45px 35px;
+    direction: rtl;
+
+    padding:
+        50px 40px;
 
     display: flex;
 
@@ -388,368 +882,666 @@ nav a:hover {
     justify-content: center;
 }
 
+
 .modal-label {
-    color: var(--pink);
 
-    font-family: Georgia, serif;
+    direction: ltr;
 
-    font-size: 11px;
+    font-size: 12px;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+
+    font-weight: 800;
+
+    color: var(--rose-gold);
+
+    margin-bottom: 15px;
 }
+
 
 .modal-content h2 {
-    margin-top: 12px;
 
-    color: var(--text);
+    font-size: 28px;
 
-    font-size: 25px;
+    font-weight: 900;
+
+    margin-bottom: 18px;
+
+    color: var(--text-dark);
 }
+
 
 .modal-content p {
-    margin-top: 18px;
 
-    color: var(--muted);
+    color: var(--text-soft);
 
-    font-size: 13px;
+    line-height: 2;
 
-    line-height: 2.2;
+    font-size: 14px;
+
+    margin-bottom: 25px;
 }
+
 
 .modal-price {
-    margin-top: 22px;
 
-    color: var(--dark-pink);
+    color: var(--pink-dark);
 
-    font-size: 19px;
+    font-size: 23px;
 
-    font-weight: 700;
+    font-weight: 900;
+
+    margin-bottom: 25px;
 }
+
 
 .modal-buy {
-    width: 100%;
-
-    margin-top: 22px;
-
-    padding: 13px;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    text-decoration: none;
-
-    color: white;
-
-    background: var(--dark-pink);
-
-    font-size: 13px;
-
-    transition: 0.25s;
-}
-
-.modal-buy:hover {
-    background: #74324d;
-}
-
-
-/* دکمه بستن */
-
-.close-modal {
-    position: absolute;
-
-    top: 13px;
-    left: 13px;
-
-    z-index: 10;
-
-    width: 38px;
-    height: 38px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
+
+    min-height: 52px;
+
+    border-radius: 16px;
+
+    color: white;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink-dark),
+            var(--pink)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(143,73,103,0.20);
+
+    transition:
+        0.3s ease;
+}
+
+
+.modal-buy:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(143,73,103,0.30);
+}
+
+
+/* Close */
+
+.close-modal {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    z-index: 5;
+
+    width: 42px;
+    height: 42px;
 
     border: none;
 
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
 
-    color: #555;
-
-    font-size: 25px;
+    font-size: 27px;
 
     line-height: 1;
 
-    cursor: pointer;
+    color: var(--pink-dark);
+
+    background:
+        rgba(255,255,255,0.90);
+
+    box-shadow:
+        0 5px 20px rgba(80,30,50,0.12);
+
+    transition:
+        0.3s ease;
 }
 
 .close-modal:hover {
-    background: #f5dce5;
+
+    color: #ffffff;
+
+    background:
+        var(--pink-dark);
+
+    transform:
+        rotate(90deg);
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   CONTACT / FOOTER
+   ========================================================= */
 
 footer {
-    width: 100%;
 
-    padding: 60px 20px 25px;
+    position: relative;
 
-    background: #281e23;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4b2938,
+            #6f3b51
+        );
 
     color: white;
+
+    padding:
+        70px 25px 25px;
 
     text-align: center;
 }
 
+
+footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(232,185,199,0.12);
+
+    filter: blur(80px);
+
+    top: -250px;
+    right: -150px;
+}
+
+
+footer::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    filter: blur(80px);
+
+    bottom: -250px;
+    left: -150px;
+}
+
+
 .footer-content {
+
+    position: relative;
+
+    z-index: 2;
+
     max-width: 900px;
 
     margin: auto;
 }
 
+
 .footer-content h2 {
-    color: #f4cbd9;
 
-    font-family: Georgia, serif;
+    direction: ltr;
 
-    font-size: 28px;
+    font-size: 30px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
 }
 
-.footer-content p {
-    margin-top: 10px;
 
-    color: #c8bdc1;
+.footer-content > p {
 
-    font-size: 13px;
+    color:
+        rgba(255,255,255,0.75);
 
-    line-height: 2;
+    font-size: 14px;
+
+    margin-bottom: 30px;
 }
+
+
+/* Social buttons */
 
 .socials {
+
     display: flex;
 
-    align-items: center;
     justify-content: center;
 
     flex-wrap: wrap;
 
     gap: 10px;
 
-    margin-top: 25px;
+    margin-bottom: 45px;
 }
+
 
 .socials a {
-    padding: 9px 16px;
 
-    border: 1px solid #66535b;
+    min-width: 105px;
 
-    border-radius: 25px;
+    padding:
+        11px 18px;
 
-    color: white;
+    border:
+        1px solid rgba(255,255,255,0.18);
 
-    font-size: 12px;
+    border-radius: 14px;
 
-    text-decoration: none;
+    background:
+        rgba(255,255,255,0.08);
 
-    transition: 0.25s;
+    color:
+        rgba(255,255,255,0.90);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        0.3s ease;
 }
+
 
 .socials a:hover {
-    background: var(--pink);
 
-    border-color: var(--pink);
+    background:
+        rgba(255,255,255,0.18);
+
+    border-color:
+        rgba(255,255,255,0.35);
+
+    transform:
+        translateY(-3px);
 }
+
+
+/* Copyright */
 
 .copyright {
-    margin-top: 40px;
 
-    padding-top: 18px;
+    padding-top: 25px;
 
-    border-top: 1px solid #44363d;
+    border-top:
+        1px solid rgba(255,255,255,0.12);
 
-    color: #91848a;
+    color:
+        rgba(255,255,255,0.55);
 
-    font-size: 11px;
+    direction: ltr;
+
+    font-size: 12px;
 }
 
 
-/* ================= TABLET ================= */
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
 
     .products-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        gap: 18px;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
     }
-
-    .header {
-        padding: 0 25px;
-    }
-
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 600px) {
-
-    .header {
-        height: 68px;
-
-        padding: 0 16px;
-    }
-
-    .logo {
-        font-size: 21px;
-    }
-
-    nav {
-        gap: 13px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
 
     .hero {
-        height: 330px;
+
+        min-height: 560px;
     }
 
-    .hero-brand {
-        font-size: 42px;
-
-        letter-spacing: 5px;
-    }
-
-    .hero h1 {
-        font-size: 23px;
-    }
-
-    .hero p {
-        font-size: 12px;
-    }
+}
 
 
-    .products-section {
-        padding: 60px 12px;
-    }
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
 
-    .section-title {
-        margin-bottom: 30px;
-    }
+@media (max-width: 650px) {
 
-    .section-title h2 {
-        font-size: 27px;
-    }
+    header > div,
+    header .header-content {
 
+        min-height: 70px;
 
-    .products-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding:
+            12px 17px;
 
         gap: 10px;
     }
 
 
-    .product-card {
-        border-radius: 15px;
+    .logo {
+
+        font-size: 18px;
+
+        letter-spacing: 1px;
     }
 
-    .product-info {
-        padding: 11px;
+
+    nav {
+
+        gap: 3px;
     }
 
-    .product-info h3 {
+
+    nav a {
+
+        padding:
+            8px 9px;
+
         font-size: 12px;
+    }
+
+
+    /* Mobile Header Image */
+
+    .hero {
+
+        min-height: 600px;
+
+        background-image:
+            url("images/header-mobile.jpg");
+
+        background-position:
+            center center;
+    }
+
+
+    .hero-content {
+
+        width: 90%;
+
+        padding:
+            40px 20px;
+
+        border-radius:
+            25px;
+    }
+
+
+    .hero-brand {
+
+        font-size: 25px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 28px;
 
         line-height: 1.7;
     }
 
-    .product-info p {
-        font-size: 10px;
+
+    .hero-content p {
+
+        font-size: 14px;
     }
 
 
-    .buttons {
-        gap: 5px;
+    #products {
 
-        margin-top: 11px;
-    }
-
-    .buttons a,
-    .buttons button {
-        height: 34px;
-
-        font-size: 10px;
-
-        border-radius: 7px;
+        padding:
+            65px 16px 75px;
     }
 
 
-    /* modal موبایل */
+    .section-title {
 
-    .modal {
-        padding: 12px;
+        margin-bottom: 35px;
     }
 
-    .modal-box {
-        width: 100%;
 
-        max-height: 94vh;
+    .section-title h2 {
 
-        display: block;
-
-        overflow-y: auto;
-
-        border-radius: 18px;
+        font-size: 28px;
     }
 
-    .modal-box > img {
-        width: 100%;
 
-        height: 260px;
+    .products-grid {
 
-        min-height: 260px;
+        grid-template-columns:
+            1fr;
+
+        gap: 22px;
     }
 
-    .modal-content {
-        padding: 25px 20px 30px;
+
+    .product-info {
+
+        padding:
+            20px;
     }
 
-    .modal-content h2 {
-        font-size: 20px;
-    }
 
-    .modal-content p {
-        font-size: 12px;
+    .product-info h3 {
 
-        line-height: 2;
-    }
-
-    .modal-price {
         font-size: 17px;
     }
 
 
-    /* footer */
+    .buttons {
+
+        margin-top: 17px;
+    }
+
+
+    .view-button,
+    .buy-button {
+
+        min-height: 48px;
+    }
+
+
+    /* Modal */
+
+    .modal {
+
+        padding: 15px;
+    }
+
+
+    .modal-box {
+
+        grid-template-columns:
+            1fr;
+
+        max-height:
+            92vh;
+
+        border-radius:
+            24px;
+    }
+
+
+    .modal-box > img {
+
+        min-height:
+            260px;
+
+        max-height:
+            330px;
+    }
+
+
+    .modal-content {
+
+        padding:
+            30px 24px 35px;
+    }
+
+
+    .modal-content h2 {
+
+        font-size: 23px;
+    }
+
+
+    .modal-content p {
+
+        font-size: 13px;
+    }
+
 
     footer {
-        padding: 45px 15px 20px;
+
+        padding:
+            55px 18px 22px;
     }
+
+
+    .footer-content h2 {
+
+        font-size: 25px;
+    }
+
 
     .socials {
-        gap: 7px;
+
+        gap: 8px;
+
+        margin-bottom: 35px;
     }
+
 
     .socials a {
-        padding: 8px 12px;
 
-        font-size: 10px;
+        min-width:
+            calc(50% - 8px);
+
+        font-size: 12px;
     }
 
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+
+        font-size: 16px;
+    }
+
+
+    nav a {
+
+        font-size: 11px;
+
+        padding:
+            7px 7px;
+    }
+
+
+    .hero {
+
+        min-height: 550px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 25px;
+    }
+
+
+    .hero-brand {
+
+        font-size: 22px;
+    }
+
+
+    .buttons {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+
+    color: #ffffff;
+
+    background:
+        var(--pink);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 9px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:
+        #fff5f8;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            var(--rose-gold),
+            var(--pink-dark)
+        );
+
+    border-radius:
+        20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        var(--pink-dark);
 }
