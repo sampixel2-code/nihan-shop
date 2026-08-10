@@ -14,289 +14,488 @@
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
+<!-- ================= HEADER ================= -->
 
-        <div class="logo">
-            Nihan Shop
-        </div>
+<header class="header">
 
-        <nav>
-            <a href="#products">محصولات</a>
-            <a href="#contact">ارتباط با ما</a>
-        </nav>
+    <div class="logo">
+        Nihan Shop
+    </div>
 
-    </header>
+    <nav>
+        <a href="#products">محصولات</a>
+        <a href="#contact">ارتباط با ما</a>
+    </nav>
+
+</header>
 
 
-    <!-- Main -->
-    <main>
+<!-- ================= HERO ================= -->
 
-        <section class="hero">
+<section class="hero">
 
-            <span>NIHAN SHOP</span>
+    <span>NIHAN SHOP</span>
 
-            <h1>انتخابی برای زیبایی تو</h1>
+    <h1>انتخابی برای زیبایی تو</h1>
 
-            <p>
-                محصولات آرایشی و بهداشتی منتخب نیهان شاپ
-            </p>
+    <p>
+        محصولات آرایشی و بهداشتی منتخب نیهان شاپ
+    </p>
 
-            <a href="#products" class="hero-button">
-                مشاهده محصولات
+    <a href="#products" class="hero-button">
+        مشاهده محصولات
+    </a>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-title">
+
+        <span>NIHAN SHOP</span>
+
+        <h2>محصولات ما</h2>
+
+        <p>
+            محصول مورد علاقه‌ات را انتخاب کن
+        </p>
+
+    </div>
+
+
+    <div class="products-grid">
+
+
+        <!-- محصول 1 -->
+
+        <article class="product-card">
+
+            <img
+                src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
+                alt="محصول آرایشی شماره ۱"
+            >
+
+            <div class="product-info">
+
+                <h3>محصول آرایشی شماره ۱</h3>
+
+                <p>
+                    محصول با کیفیت نیهان شاپ
+                </p>
+
+                <div class="buttons">
+
+                    <button
+                        class="view-button"
+                        onclick="openProduct(
+                        'محصول آرایشی شماره ۱',
+                        'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                        'این قسمت توضیحات کامل محصول قرار می‌گیرد. می‌توانیم ویژگی‌ها، نحوه استفاده، برند، حجم و اطلاعات دیگر محصول را اینجا بنویسیم.',
+                        '۵۹۰,۰۰۰ تومان'
+                        )">
+                        مشاهده
+                    </button>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/491234567890?text=سلام، برای خرید محصول آرایشی شماره ۱ راهنمایی می‌خواستم."
+                        target="_blank">
+                        خرید
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- محصول 2 -->
+
+        <article class="product-card">
+
+            <img
+                src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
+                alt="محصول آرایشی شماره ۲"
+            >
+
+            <div class="product-info">
+
+                <h3>محصول آرایشی شماره ۲</h3>
+
+                <p>
+                    محصول با کیفیت نیهان شاپ
+                </p>
+
+                <div class="buttons">
+
+                    <button
+                        class="view-button"
+                        onclick="openProduct(
+                        'محصول آرایشی شماره ۲',
+                        'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                        'توضیحات کامل محصول شماره ۲ اینجا قرار می‌گیرد.',
+                        '۷۹۰,۰۰۰ تومان'
+                        )">
+                        مشاهده
+                    </button>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/491234567890?text=سلام، برای خرید محصول آرایشی شماره ۲ راهنمایی می‌خواستم."
+                        target="_blank">
+                        خرید
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- محصول 3 -->
+
+        <article class="product-card">
+
+            <img
+                src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
+                alt="محصول آرایشی شماره ۳"
+            >
+
+            <div class="product-info">
+
+                <h3>محصول آرایشی شماره ۳</h3>
+
+                <p>
+                    محصول با کیفیت نیهان شاپ
+                </p>
+
+                <div class="buttons">
+
+                    <button
+                        class="view-button"
+                        onclick="openProduct(
+                        'محصول آرایشی شماره ۳',
+                        'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                        'توضیحات کامل محصول شماره ۳ اینجا قرار می‌گیرد.',
+                        '۴۹۰,۰۰۰ تومان'
+                        )">
+                        مشاهده
+                    </button>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/491234567890?text=سلام، برای خرید محصول آرایشی شماره ۳ راهنمایی می‌خواستم."
+                        target="_blank">
+                        خرید
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- محصول 4 -->
+
+        <article class="product-card">
+
+            <img
+                src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
+                alt="محصول آرایشی شماره ۴"
+            >
+
+            <div class="product-info">
+
+                <h3>محصول آرایشی شماره ۴</h3>
+
+                <p>
+                    محصول با کیفیت نیهان شاپ
+                </p>
+
+                <div class="buttons">
+
+                    <button
+                        class="view-button"
+                        onclick="openProduct(
+                        'محصول آرایشی شماره ۴',
+                        'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                        'توضیحات کامل محصول شماره ۴ اینجا قرار می‌گیرد.',
+                        '۶۹۰,۰۰۰ تومان'
+                        )">
+                        مشاهده
+                    </button>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/491234567890?text=سلام، برای خرید محصول آرایشی شماره ۴ راهنمایی می‌خواستم."
+                        target="_blank">
+                        خرید
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- محصول 5 -->
+
+        <article class="product-card">
+
+            <img
+                src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
+                alt="محصول آرایشی شماره ۵"
+            >
+
+            <div class="product-info">
+
+                <h3>محصول آرایشی شماره ۵</h3>
+
+                <p>
+                    محصول با کیفیت نیهان شاپ
+                </p>
+
+                <div class="buttons">
+
+                    <button
+                        class="view-button"
+                        onclick="openProduct(
+                        'محصول آرایشی شماره ۵',
+                        'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                        'توضیحات کامل محصول شماره ۵ اینجا قرار می‌گیرد.',
+                        '۸۹۰,۰۰۰ تومان'
+                        )">
+                        مشاهده
+                    </button>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/491234567890?text=سلام، برای خرید محصول آرایشی شماره ۵ راهنمایی می‌خواستم."
+                        target="_blank">
+                        خرید
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- محصول 6 -->
+
+        <article class="product-card">
+
+            <img
+                src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
+                alt="محصول آرایشی شماره ۶"
+            >
+
+            <div class="product-info">
+
+                <h3>محصول آرایشی شماره ۶</h3>
+
+                <p>
+                    محصول با کیفیت نیهان شاپ
+                </p>
+
+                <div class="buttons">
+
+                    <button
+                        class="view-button"
+                        onclick="openProduct(
+                        'محصول آرایشی شماره ۶',
+                        'https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop',
+                        'توضیحات کامل محصول شماره ۶ اینجا قرار می‌گیرد.',
+                        '۳۹۰,۰۰۰ تومان'
+                        )">
+                        مشاهده
+                    </button>
+
+                    <a
+                        class="buy-button"
+                        href="https://wa.me/491234567890?text=سلام، برای خرید محصول آرایشی شماره ۶ راهنمایی می‌خواستم."
+                        target="_blank">
+                        خرید
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCT MODAL ================= -->
+
+<div class="modal" id="productModal">
+
+    <div class="modal-box">
+
+        <button class="close-modal" onclick="closeProduct()">
+            ×
+        </button>
+
+        <img id="modalImage" src="" alt="محصول">
+
+        <div class="modal-content">
+
+            <span class="modal-label">
+                NIHAN SHOP
+            </span>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDescription"></p>
+
+            <div class="modal-price" id="modalPrice"></div>
+
+            <a
+                id="modalBuy"
+                class="modal-buy"
+                href="#"
+                target="_blank">
+                خرید این محصول
             </a>
 
-        </section>
+        </div>
 
+    </div>
 
-        <!-- Products -->
-        <section class="products-section" id="products">
+</div>
 
-            <div class="section-title">
 
-                <span>NIHAN SHOP</span>
+<!-- ================= FOOTER ================= -->
 
-                <h2>محصولات ما</h2>
+<footer id="contact">
 
-                <p>محصول مورد علاقه‌ات را انتخاب کن</p>
+    <div class="footer-content">
 
-            </div>
+        <h2>Nihan Shop</h2>
 
+        <p>
+            برای سفارش و ارتباط با ما همراه ما باشید.
+        </p>
 
-            <div class="products-grid">
 
+        <div class="socials">
 
-                <!-- Product 1 -->
-                <article class="product-card">
+            <a href="#" target="_blank">
+                Instagram
+            </a>
 
-                    <img
-                        src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                        alt="محصول نیهان شاپ">
+            <a href="#" target="_blank">
+                Telegram
+            </a>
 
-                    <div class="product-info">
+            <a href="#" target="_blank">
+                WhatsApp
+            </a>
 
-                        <h3>محصول آرایشی شماره ۱</h3>
+            <a href="#" target="_blank">
+                Rubika
+            </a>
 
-                        <p>توضیح کوتاه محصول</p>
-
-                        <div class="buttons">
-
-                            <a href="#" class="view-button">
-                                مشاهده
-                            </a>
-
-                            <a href="#" class="buy-button">
-                                خرید
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Product 2 -->
-                <article class="product-card">
-
-                    <img
-                        src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                        alt="محصول نیهان شاپ">
-
-                    <div class="product-info">
-
-                        <h3>محصول آرایشی شماره ۲</h3>
-
-                        <p>توضیح کوتاه محصول</p>
-
-                        <div class="buttons">
-
-                            <a href="#" class="view-button">
-                                مشاهده
-                            </a>
-
-                            <a href="#" class="buy-button">
-                                خرید
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Product 3 -->
-                <article class="product-card">
-
-                    <img
-                        src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                        alt="محصول نیهان شاپ">
-
-                    <div class="product-info">
-
-                        <h3>محصول آرایشی شماره ۳</h3>
-
-                        <p>توضیح کوتاه محصول</p>
-
-                        <div class="buttons">
-
-                            <a href="#" class="view-button">
-                                مشاهده
-                            </a>
-
-                            <a href="#" class="buy-button">
-                                خرید
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Product 4 -->
-                <article class="product-card">
-
-                    <img
-                        src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                        alt="محصول نیهان شاپ">
-
-                    <div class="product-info">
-
-                        <h3>محصول آرایشی شماره ۴</h3>
-
-                        <p>توضیح کوتاه محصول</p>
-
-                        <div class="buttons">
-
-                            <a href="#" class="view-button">
-                                مشاهده
-                            </a>
-
-                            <a href="#" class="buy-button">
-                                خرید
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Product 5 -->
-                <article class="product-card">
-
-                    <img
-                        src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                        alt="محصول نیهان شاپ">
-
-                    <div class="product-info">
-
-                        <h3>محصول آرایشی شماره ۵</h3>
-
-                        <p>توضیح کوتاه محصول</p>
-
-                        <div class="buttons">
-
-                            <a href="#" class="view-button">
-                                مشاهده
-                            </a>
-
-                            <a href="#" class="buy-button">
-                                خرید
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- Product 6 -->
-                <article class="product-card">
-
-                    <img
-                        src="https://placehold.co/600x600/f8e4ec/9b536e?text=Nihan+Shop"
-                        alt="محصول نیهان شاپ">
-
-                    <div class="product-info">
-
-                        <h3>محصول آرایشی شماره ۶</h3>
-
-                        <p>توضیح کوتاه محصول</p>
-
-                        <div class="buttons">
-
-                            <a href="#" class="view-button">
-                                مشاهده
-                            </a>
-
-                            <a href="#" class="buy-button">
-                                خرید
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer id="contact">
-
-        <div class="footer-content">
-
-            <h2>Nihan Shop</h2>
-
-            <p>
-                برای سفارش و ارتباط با ما در شبکه‌های اجتماعی همراه ما باشید.
-            </p>
-
-
-            <div class="socials">
-
-                <a href="#" target="_blank">
-                    Instagram
-                </a>
-
-                <a href="#" target="_blank">
-                    Telegram
-                </a>
-
-                <a href="#" target="_blank">
-                    WhatsApp
-                </a>
-
-                <a href="#" target="_blank">
-                    Rubika
-                </a>
-
-                <a href="#" target="_blank">
-                    Eitaa
-                </a>
-
-            </div>
-
-
-            <div class="copyright">
-                © 2026 Nihan Shop
-            </div>
+            <a href="#" target="_blank">
+                Eitaa
+            </a>
 
         </div>
 
-    </footer>
+
+        <div class="copyright">
+            © 2026 Nihan Shop
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function openProduct(title, image, description, price) {
+
+    document.getElementById("modalTitle").textContent = title;
+
+    document.getElementById("modalImage").src = image;
+
+    document.getElementById("modalDescription").textContent = description;
+
+    document.getElementById("modalPrice").textContent = price;
+
+
+    const message =
+        "سلام، برای خرید «" +
+        title +
+        "» راهنمایی می‌خواستم.";
+
+    document.getElementById("modalBuy").href =
+        "https://wa.me/491234567890?text=" +
+        encodeURIComponent(message);
+
+
+    document.getElementById("productModal").classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeProduct() {
+
+    document.getElementById("productModal").classList.remove("active");
+
+    document.body.style.overflow = "auto";
+}
+
+
+/* بستن پنجره با کلیک بیرون */
+
+document.getElementById("productModal").addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === this) {
+
+            closeProduct();
+
+        }
+
+    }
+);
+
+
+/* بستن با دکمه ESC */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeProduct();
+
+        }
+
+    }
+);
+
+</script>
+
 
 </body>
 
